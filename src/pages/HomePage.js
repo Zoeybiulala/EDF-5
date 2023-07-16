@@ -18,6 +18,20 @@ const config = require('../config.json');
 
 export default function HomePage() {
   const [showInfo, setShowInfo] = useState(true);
+    useEffect(() => {
+        const script1 = document.createElement('script');
+        script1.innerHTML = `
+      window.GPTTConfig = {
+        uuid: "94c85b4c70ee4816afec1434898d3168"
+      };
+    `;
+        document.body.appendChild(script1);
+
+        const script2 = document.createElement('script');
+        script2.src = 'https://app.gpt-trainer.com/widget-asset.js';
+        script2.defer = true;
+        document.body.appendChild(script2);
+    }, []);
 
   const availability = ['Monday','Tuesday','Wednesday','Friday'];
   const managerInfo = {photo:'img_1.png', name:'Alice',title:'Engagement Management', contactInfo: {email:'fakeemail@gmail.com', phone: '123123'}, availability};
@@ -69,19 +83,19 @@ export default function HomePage() {
             {/*    defer>*/}
             {/*</script>*/}
             {/*</div>*/}
-            <script
-                dangerouslySetInnerHTML={{
-                    __html: `
-            window.GPTTConfig = {
-              uuid: "94c85b4c70ee4816afec1434898d3168"
-            };
-          `
-                }}
-            />
-            <script
-                src="https://app.gpt-trainer.com/widget-asset.js"
-                defer>
-            </script>
+          {/*  <script*/}
+          {/*      dangerouslySetInnerHTML={{*/}
+          {/*          __html: `*/}
+          {/*  window.GPTTConfig = {*/}
+          {/*    uuid: "94c85b4c70ee4816afec1434898d3168"*/}
+          {/*  };*/}
+          {/*`*/}
+          {/*      }}*/}
+          {/*  />*/}
+          {/*  <script*/}
+          {/*      src="https://app.gpt-trainer.com/widget-asset.js"*/}
+          {/*      defer>*/}
+          {/*  </script>*/}
         </div>
       </div>
     
