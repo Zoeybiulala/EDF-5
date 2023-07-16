@@ -58,11 +58,26 @@ export default function HomePage() {
             {/*    height="700"*/}
             {/*    frameBorder="0"*/}
             {/*></iframe>*/}
-            <script>
-                {window.GPTTConfig = {
-                uuid: "94c85b4c70ee4816afec1434898d3168",
-            }}
-            </script>
+            {/*<div>*/}
+            {/*<script>*/}
+            {/*    window.GPTTConfig = {*/}
+            {/*        uuid: "94c85b4c70ee4816afec1434898d3168",*/}
+            {/*    };*/}
+            {/*</script>*/}
+            {/*<script*/}
+            {/*    src="https://app.gpt-trainer.com/widget-asset.js"*/}
+            {/*    defer>*/}
+            {/*</script>*/}
+            {/*</div>*/}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+            window.GPTTConfig = {
+              uuid: "94c85b4c70ee4816afec1434898d3168"
+            };
+          `
+                }}
+            />
             <script
                 src="https://app.gpt-trainer.com/widget-asset.js"
                 defer>
