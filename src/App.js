@@ -6,6 +6,7 @@ import { createTheme } from "@mui/material/styles";
 import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import AlbumsPage from './pages/AlbumsPage';
+import FellowDetail from './pages/FellowDetail';
 import DrugInfoPage from "./pages/DrugInfoPage";
 import ComparisonLandingPage from "./pages/ComparisonLandingPage";
 import ComparisonPage from "./pages/ComparisonPage";
@@ -16,6 +17,7 @@ import OTC from './pages/OTCPrescription';
 import Advanced from './pages/Advanced';
 import ErrorPage from './pages/ErrorPage';
 import SearchResult from './pages/SearchResult';
+import FAQPage from "./pages/FAQPage";
 
 // createTheme enables you to customize the look and feel of your app past the default
 // in this case, we only change the color scheme
@@ -37,19 +39,10 @@ export default function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/landingPage" element={<AlbumsPage />} />
-          <Route path="/drugs" element={<AlbumsPage />} />
-          <Route path="/drug/:drugName" element={<DrugInfoPage />} />
-          <Route path="/comparison" element={<ComparisonLandingPage />} />
-          <Route path="/comparison/withCondition" element={<ComparisonPage />} />
-          <Route path="/comparison/withoutCondition" element={<ComparisonWithoutPage />} />
-          <Route path="/comparison/withAI" element={<ComparisonWithAIPage />} />
-          <Route path="/advancedpage" element={<AdvancedPage />} />
-          <Route path="/otcandp" element={<OTC />} />
-          <Route path="/advanced" element={<Advanced />} />
-          <Route path="/error" element={<ErrorPage />}/>
-          <Route path="/search-result/:searchType/:searchTerm" element={<SearchResult />}/>
-          <Route path="/" element={<HomePage />} errorElement={<ErrorPage />}/>
+            <Route path="/faqs" element={<FAQPage/>}/>
+            <Route path="/landingPage" element={<AlbumsPage/>}/>
+            <Route path="/fellowDetail" element={<FellowDetail/>}/>
+            <Route path="/" element={<HomePage/>} errorElement={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

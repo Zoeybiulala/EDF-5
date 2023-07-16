@@ -32,10 +32,11 @@ export default function NavBar() {
     <AppBar position='static' style={{backgroundColor: '#2196F3'}}>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <NavText href='/' text='EMPortal' isMain />
-          <NavText href='/general' text='General' />
-          <NavText href='/international student' text='International' />
-          <NavText href='/host' text='HostCompany' />
+            <NavText href='/' text='EMPortal' isMain/>
+            <NavText href='/faqs' text='FAQs'/>
+            <NavText href='/fellowDetail' text='Fellow Detail'/>
+            {/*<NavText href='/international student' text='International' />*/}
+            {/*<NavText href='/host' text='HostCompany' />*/}
         </Toolbar>
       </Container>
     </AppBar>
