@@ -1,0 +1,22 @@
+.landing-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px;
+  .tab {
+    margin-top: 3rem;
+  }
+}
+
+.left-section {
+  flex: 3;
+  margin-right: 32px;
+}
+
+.right-section {
+  flex: 1;
+  max-width: 25%;
+}
+
+
