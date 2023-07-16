@@ -51,13 +51,22 @@ export default function HomePage() {
         </div>
         <div className="right-section">
           <NameCard manager={managerInfo}/>
+            {/*<iframe*/}
+            {/*    src="https://app.gpt-trainer.com/gpt-trainer-widget/94c85b4c70ee4816afec1434898d3168"*/}
+            {/*    width="100%"*/}
+            {/*    height="700"*/}
+            {/*    frameBorder="0"*/}
+            {/*></iframe>*/}
+            <script>
+                window.GPTTConfig = {
+                uuid: "94c85b4c70ee4816afec1434898d3168",
+            }
+            </script>
+            <script
+                src="https://app.gpt-trainer.com/widget-asset.js"
+                defer>
+            </script>
         </div>
-          <iframe
-              src="https://app.gpt-trainer.com/gpt-trainer-widget/94c85b4c70ee4816afec1434898d3168"
-              width="100%"
-              height="700"
-              frameBorder="0"
-          ></iframe>
       </div>
     
     // <Container >
