@@ -11,6 +11,7 @@ import ProgressBar from "../components/ProgressBar";
 import '../styles/NameCard.scss';
 import '../styles/HomePage.scss';
 import LandingTabs from "../components/LandingTabs";
+import uuid from "uuid";
 
 
 const config = require('../config.json');
@@ -58,9 +59,9 @@ export default function HomePage() {
             {/*    frameBorder="0"*/}
             {/*></iframe>*/}
             <script>
-                window.GPTTConfig = {
+                {window.GPTTConfig = {
                 uuid: "94c85b4c70ee4816afec1434898d3168",
-            }
+            }}
             </script>
             <script
                 src="https://app.gpt-trainer.com/widget-asset.js"
