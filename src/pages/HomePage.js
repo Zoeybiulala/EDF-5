@@ -11,6 +11,9 @@ import ManagerPortal from "../components/ManagerPortal";
 import NavBar from "../components/NavBar";
 
 
+
+
+
 export default function HomePage() {
   const [showInfo, setShowInfo] = useState(true);
 

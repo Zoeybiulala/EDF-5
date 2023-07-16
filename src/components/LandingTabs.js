@@ -4,7 +4,7 @@ import TodoList from "./TodoList";
 import YouTube from 'react-youtube';
 import ProgressBar from "./ProgressBar";
 
-const YouTubeVideo = (videoId) => {
+const YouTubeVideo = () => {
     const opts = {
         height: '360',
         width: '640',
@@ -13,7 +13,7 @@ const YouTubeVideo = (videoId) => {
         },
     };
 
-    return <YouTube videoId={videoId} opts={opts} />;
+    return <YouTube videoId={'Df3A6J05fnY'} opts={opts} />;
 };
 
 const LandingTabs = () => {
@@ -51,7 +51,7 @@ const ResourceVideos = () => {
     return (
         <div>
             <h2>Resource Videos</h2>
-            <YouTubeVideo videoId='Df3A6J05fnY'/>
+            <YouTubeVideo/>
         </div>
     );
 };

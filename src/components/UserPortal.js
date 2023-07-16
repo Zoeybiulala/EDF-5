@@ -2,31 +2,12 @@ import ProgressBar from "./ProgressBar";
 import LandingTabs from "./LandingTabs";
 import NameCard from "./NameCard";
 import {useState} from "react";
-import YouTube from "react-youtube";
-import * as PropTypes from "prop-types";
 
-function YoutubeVideo(props) {
-    return null;
-}
-
-YoutubeVideo.propTypes = {videoId: PropTypes.string};
 export default function UserPortal() {
-    const YouTubeVideo = (videoId) => {
-        const opts = {
-            height: '360',
-            width: '640',
-            playerVars: {
-                autoplay: 0,
-            },
-        };
-
-        return <YouTube videoId={videoId} opts={opts} />;
-    };
     const [showInfo, setShowInfo] = useState(true);
     const handleToggleInfo = () => {
         setShowInfo(!showInfo);
     };
-
     const availability = ['Monday', 'Tuesday', 'Wednesday', 'Friday'];
     const managerInfo = {
         photo: 'img_1.png',
@@ -56,7 +37,7 @@ export default function UserPortal() {
                     <div className="information-board">
                         {/* Content of the information board */}
                         <h2>OPT/CPT</h2>
-                        <YouTubeVideo videoId='CmboasUaVRc'/>
+                        <h2>I-20</h2>
                         <h2>Other I-9 documents</h2>
                     </div>
                 )}
