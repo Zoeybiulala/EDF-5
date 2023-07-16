@@ -51,7 +51,7 @@ const ResourceVideos = () => {
     return (
         <div>
             <h2>Resource Videos</h2>
-            <YouTubeVideo videoId={'Df3A6J05fnY'}/>
+            <YouTubeVideo videoId='Df3A6J05fnY'/>
         </div>
     );
 };

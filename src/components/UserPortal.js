@@ -56,7 +56,7 @@ export default function UserPortal() {
                     <div className="information-board">
                         {/* Content of the information board */}
                         <h2>OPT/CPT</h2>
-                        <YouTubeVideo videoId={'CmboasUaVRc'} />
+                        <YouTubeVideo videoId='CmboasUaVRc'/>
                         <h2>Other I-9 documents</h2>
                     </div>
                 )}
