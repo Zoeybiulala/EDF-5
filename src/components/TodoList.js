@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../styles/TodoList.scss';
+import ProgressBar from "./ProgressBar";
 
 function setTodos(updatedTodos) {
     
@@ -16,8 +17,9 @@ const TodoList = () => {
     const [selectedWeek, setSelectedWeek] = useState(1);
     const [flag, setFlag] = useState(1);
 
+
     const weekOptions = [
-        { value: 1, label: 'Week 1' },
+        { value: 1, label: 'Onboarding' },
         { value: 2, label: 'Week 2' },
         { value: 3, label: 'Week 3' },
         { value: 4, label: 'Week 4' },
@@ -68,11 +70,21 @@ const TodoList = () => {
 
         // Update the todos state
         setTodos(updatedTodos);
+        const completedCount = todos.filter((todo) => todo.completed).length;
+        const totalTodos = 5;
+        const completionPercentage = (completedCount / totalTodos) * 100;
     };
+
+    // Calculate the completion percentage
+    const completedCount = todos.filter((todo) => todo.completed).length;
+    const totalTodos = todos.length;
+    const completionPercentage = (completedCount / totalTodos) * 100;
+
 
     return (
         <div className="todo-list">
             <h2>Onboarding To-Do List</h2>
+            <ProgressBar percentage={completionPercentage} />
             <div className="week-dropdown">
                 <label htmlFor="week-select">Select Week:</label>
                 <select

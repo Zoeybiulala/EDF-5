@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
 import '../styles/LandingTabs.scss';
 import TodoList from "./TodoList";
+import YouTube from 'react-youtube';
+import ProgressBar from "./ProgressBar";
+
+const YouTubeVideo = () => {
+    const opts = {
+        height: '360',
+        width: '640',
+        playerVars: {
+            autoplay: 0,
+        },
+    };
+
+    return <YouTube videoId={'Df3A6J05fnY'} opts={opts} />;
+};
+
 const LandingTabs = () => {
     const [activeTab, setActiveTab] = useState(1);
 
@@ -36,10 +51,11 @@ const ResourceVideos = () => {
     return (
         <div>
             <h2>Resource Videos</h2>
-            {/* Add resource videos content here */}
+            <YouTubeVideo/>
         </div>
     );
 };
+
 
 const Todos = () => {
     return (

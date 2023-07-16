@@ -21,7 +21,7 @@ export default function UserPortal() {
     return (
         <div className="landing-page">
             <div className="left-section">
-                <ProgressBar value={value} maxValue={maxValue}/>
+                {/*<ProgressBar value={value} maxValue={maxValue}/>*/}
                 {/*<img className="roadmap" src="img.png" alt="roadmap"/>*/}
                 <LandingTabs/>
                 <div className="info-toggle">
@@ -36,9 +36,9 @@ export default function UserPortal() {
                 {showInfo && (
                     <div className="information-board">
                         {/* Content of the information board */}
-                        <h2>Important Information</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <p>Ut efficitur risus a mi consectetur ullamcorper.</p>
+                        <h2>OPT/CPT</h2>
+                        <h2>I-20</h2>
+                        <h2>Other I-9 documents</h2>
                     </div>
                 )}
             </div>

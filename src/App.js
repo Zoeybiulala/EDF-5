@@ -37,7 +37,6 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <NavBar />
         <Routes>
             <Route path="/faqs" element={<FAQPage/>}/>
             <Route path="/landingPage" element={<AlbumsPage/>}/>

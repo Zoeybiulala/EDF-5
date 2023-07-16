@@ -31,7 +31,7 @@ const NameCard = ({ manager }) => {
                         ))}
                     </ul>
                 </div>
-                <a href="#" onClick={handleScheduleMeeting}>
+                <a href="#" className="meeting" onClick={handleScheduleMeeting}>
                     Schedule a Meeting
                 </a>
             </div>

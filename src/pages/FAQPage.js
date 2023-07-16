@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import '../styles/FAQPage.scss'; // Import the SCSS file
+import '../styles/FAQPage.scss';
+import NavBar from "../components/NavBar"; // Import the SCSS file
 
 const FAQPage = () => {
     useEffect(() => {
@@ -33,19 +34,23 @@ const FAQPage = () => {
     };
 
     return (
-        <div className="faq-page">
-            <h1>Frequently Asked Questions</h1>
-            <ul>
-                {faqs.map((faq, index) => (
-                    <li
-                        key={index}
-                        className={expandedIndex === index ? 'expanded' : ''}
-                    >
-                        <h3 onClick={() => handleToggle(index)}>{faq.question}</h3>
-                        <p>{faq.answer}</p>
-                    </li>
-                ))}
-            </ul>
+        <div>
+            <NavBar isUserPortal={false}/>
+
+            <div className="faq-page">
+                <h1>Frequently Asked Questions</h1>
+                <ul>
+                    {faqs.map((faq, index) => (
+                        <li
+                            key={index}
+                            className={expandedIndex === index ? 'expanded' : ''}
+                        >
+                            <h3 onClick={() => handleToggle(index)}>{faq.question}</h3>
+                            <p>{faq.answer}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     );
 };

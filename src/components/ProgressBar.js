@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/ProgressBar.scss';
 
-const ProgressBar = ({ value, maxValue }) => {
-    const progress = (value / maxValue) * 100;
+const ProgressBar = ({ percentage }) => {
+    const progress = percentage
 
     return (
         <div className="progress-bar">

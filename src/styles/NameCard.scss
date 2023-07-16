@@ -60,7 +60,7 @@ p {
   margin-right: 8px;
 }
 
-a {
+a .meeting{
   display: inline-block;
   padding: 8px 16px;
   border-radius: 4px;
@@ -69,10 +69,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover .meeting{
   background-color: #1c64f2;
 }
 
-a:active {
+a:active .meeting{
   background-color: #0f4ad6;
 }
